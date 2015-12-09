@@ -9,11 +9,16 @@ listener = pifacedigitalio.InputEventListener(chip=pfd)
 def toggle_led(event):
 	event.chip.leds[event.pin_num].toggle()
 	print(event)
+	
+def stop():
+	print(event)
+	raise KeyboardInterrupt
 
 try:
 
 	listener.register(0, pifacedigitalio.IODIR_FALLING_EDGE, toggle_led)
 	listener.register(1, pifacedigitalio.IODIR_FALLING_EDGE, toggle_led)
+	listener.register(3, pifacedigitalio.IODIR_FALLING_EDGE, stop)
 	listener.activate()
 
 	if __name__ == "__main__":
