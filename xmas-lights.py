@@ -10,7 +10,7 @@ def toggle_led(event):
 	event.chip.leds[event.pin_num].toggle()
 	print(event)
 	
-def stop():
+def stop(event):
 	print(event)
 	raise KeyboardInterrupt
 
