@@ -1,4 +1,3 @@
-from sys import exit
 from random import randint
 from time import sleep
 import pifacedigitalio
@@ -13,8 +12,7 @@ def toggle_led(event):
 	
 def stop(event):
 	print(event)
-	exit(0)
-	raise exception(KeyboardInterrupt)
+	raise SystemExit
 
 try:
 
