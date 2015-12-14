@@ -8,7 +8,7 @@ listener = pifacedigitalio.InputEventListener(chip=pfd)
 
 def toggle_led(event):
 	event.chip.leds[event.pin_num].toggle()
-	print(event)
+#	print(event)
 	
 def stop(event):
 	print(event)
